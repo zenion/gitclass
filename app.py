@@ -9,4 +9,4 @@ dns_servers = open("./dns_servers", "r").read().splitlines()
 for server in dns_servers:
     a = check_output(["dig", "+short", "@" + server, sys.argv[1]])
     a = a.decode("utf-8").strip()
-    print(f"querying {server} --> {a}")
+    print(f"{server} --> {a}")
