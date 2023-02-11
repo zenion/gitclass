@@ -10,3 +10,4 @@ for server in dns_servers:
     a = check_output(["dig", "+short", "@" + server, sys.argv[1]])
     a = a.decode("utf-8").strip()
     print(f"{server} --> {a}")
+    print(42)
